@@ -178,6 +178,7 @@ class SlackBot extends Adapter
       text = "#{@robot.name} #{text}"     # If this is a DM, pretend it was addressed to us
       channel.name ?= channel._modelName  # give the channel a name
 
+    user.roomName = channel.name
 
     # Send to Hubot based on message type
     switch subtype
